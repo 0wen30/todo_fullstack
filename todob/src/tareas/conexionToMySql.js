@@ -2,12 +2,12 @@ import { createConnection } from 'mysql';
 
 export default class Conexion {
 
-    constructor(bdd) {
+    constructor() {
         if (Conexion.prototype._singletonIntance) {
             return Conexion.prototype._singletonIntance;
         }
         Conexion.prototype._singletonIntance = this;
-        this.bdd = bdd;
+        this.bdd = 'test';
         this.host = "localhost";
         this.user = "root";
         this.pass = "";

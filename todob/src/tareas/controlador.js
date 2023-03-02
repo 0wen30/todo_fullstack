@@ -1,6 +1,7 @@
+import Conexion from "./conexionToMySql.js";
 import Tareas from "./model.js";
 
-const newTarea = new Tareas();
+const newTarea = new Tareas(new Conexion());
 
 export const obtener = async(req, res) => {
     const {result,field} = await newTarea.buscar();

@@ -1,9 +1,7 @@
-import Conexion from "./conexionToMySql.js";
-
 export default class Tareas {
 
-    constructor() {
-        this.db = new Conexion('test');
+    constructor(db) {
+        this.db = db;
         this.conectar();
     }
     
